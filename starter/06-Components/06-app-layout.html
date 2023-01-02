@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #343a40;
+            font-size: 24px;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 80px 400px 1fr 250px;
+            grid-template-rows: 80px 1fr;
+            height: 100vh;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        nav, 
+        section, 
+        main, 
+        aside {
+            padding-top: 24px;
+        }
+
+        nav {
+            background-color: #343a40;
+            grid-row: 1 / -1;
+            color: #f8f9fa;
+        }
+
+        menu {
+            background-color: #7048e8;
+            color: #f8f9fa;
+            grid-column: 2 / -1;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0 40px;
+        }
+
+        button {
+            background-color: #5f3dc4;
+            border: none;
+            cursor: pointer;
+            color: #f8f9fa;
+            font-size: 16px;
+            padding: 8px 12px;
+            display: inline-block;
+            font-weight: 700;
+        }
+
+        .button:last-child {
+            background-color: red;
+            margin-left: auto;
+        }
+
+        section {
+            background-color: #f8f9fa;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            overflow: scroll;
+        }
+
+        .email {
+            height: 96px;
+            background-color: #868e96;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 0 0 auto;
+        }
+
+        aside {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <nav class="nav-left">Nav</nav>
+        <menu class="menu-bar">
+            <button class="button" type="button" aria-label="button">New</button>
+            <button class="button" type="button" aria-label="button">Reply</button>
+            <button class="button" type="button" aria-label="button">Forward</button>
+            <button class="button" type="button" aria-label="button">Mark unread</button>
+            <button class="button" type="button" aria-label="button">Trash</button>
+        </menu>
+        <section class="emails">
+            <div class="email">Email 1</div>
+            <div class="email">Email 2</div>
+            <div class="email">Email 3</div>
+            <div class="email">Email 4</div>
+            <div class="email">Email 5</div>
+            <div class="email">Email 6</div>
+            <div class="email">Email 7</div>
+            <div class="email">Email 8</div>
+            <div class="email">Email 9</div>
+            <div class="email">Email 10</div>
+        </section>
+        <main>Email view</main>
+        <aside>Additional info</aside>
+    </div>
+</body>
+</html>
