@@ -2,13 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omnifood</title>
+    <meta 
+        http-equiv="X-UA-Compatible" 
+        content="IE=edge"
+    >
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta 
+        name="description" 
+        content="Omnifood is an AI-powered 
+        food subscription that will make you eat healthy again, 365 
+        days per year. It's tailored to your personal tastes and
+        nutrition"
+    >
+    <link 
+        rel="icon" 
+        href="content/img/favicon.png"
+    />
+    <link 
+        rel="apple-touch-icon" 
+        href="content/img/apple-touch-icon.png"
+    />
+    <link 
+        rel="manifest" 
+        href="manifest.webmanifest"
+    />
+    <title>Omnifood &mdash; Never cook again!</title>
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/queries.css">
 </head>
 <body>
     <header class="header">
@@ -21,14 +47,24 @@
         </a>
         <nav class="main-nav">
             <ul class="main-nav-list">
-                <li><a class="main-nav-link" href="#section-how">How it works</a></li>
-                <li><a class="main-nav-link" href="#section-meals">Meals</a></li>
-                <li><a class="main-nav-link" href="#section-testimonials">Testimonials</a></li>
-                <li><a class="main-nav-link" href="#section-pricing">Pricing</a></li>
-                <li><a class="main-nav-link nav-cta" href="#">Try for free</a></li>
+                <li><a class="main-nav-link" href="#how">How it works</a></li>
+                <li><a class="main-nav-link" href="#meals">Meals</a></li>
+                <li><a class="main-nav-link" href="#testimonials">Testimonials</a></li>
+                <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
+                <li><a class="main-nav-link nav-cta" href="#cta">Try for free</a></li>
             </ul>
-        </nav>
-    </header>
+        </nav><!-- .main-nav -->
+        <button type="button" class="btn-mobile-nav">
+            <ion-icon 
+                class="icon-mobile-nav" 
+                name="menu-outline">
+            </ion-icon>
+            <ion-icon 
+                class="icon-mobile-nav" 
+                name="close-outline">
+            </ion-icon>
+        </button>
+    </header><!-- .header -->
     <main>
         <section class="section-hero">
             <div class="hero">
@@ -40,8 +76,18 @@
                         The smart 365-days-per-year food subscription that will make you eat healthy again. 
                         Tailored to your personal tastes and nutritional needs.
                     </p>
-                    <a href="#" class="btn btn--full margin-right-sm">Start eating well</a>
-                    <a href="#" class="btn btn--outline">Learn more &darr;</a>
+                    <a 
+                        href="#cta" 
+                        class="btn btn--full margin-right-sm"
+                    >
+                        Start eating well
+                    </a>
+                    <a 
+                        href="#how" 
+                        class="btn btn--outline"
+                    >
+                        Learn more &darr;
+                    </a>
                     <div class="delivered-meals">
                         <div class="delivered-imgs">
                             <img 
@@ -74,11 +120,16 @@
                     </div>
                 </div><!-- .hero-text-box -->
                 <div class="hero-img-box">
-                    <img 
-                        src="content/img/hero.png" 
-                        alt="Woman enjoying food"
-                        class="hero-img"
-                    >
+                    <picture>
+                        <source srcset="content/img/hero.webp" type="image/webp"/>
+                        <source srcset="content/img/hero.png" type="image/png">
+                        <img 
+                            src="content/img/hero.webp" 
+                            alt="Woman enjoying food"
+                            class="hero-img"
+                        >
+                    </picture>
+                    
                 </div><!-- .hero-img-box -->
             </div><!-- .hero -->
         </section><!-- .section-hero -->
@@ -96,7 +147,7 @@
             </div>
         </section><!-- .section-featured -->
 
-        <section class="section-how">
+        <section class="section-how" id="how">
             <div class="container">
                 <span class="subheading">How it works</span>
                 <h2 class="heading-secondary">Your daily dose of health in 3 simple steps</h2>
@@ -116,7 +167,8 @@
                     <img 
                         src="content/img/app/app-screen-1.png" 
                         alt="iphone app preference" 
-                        class="step-img"/>
+                        class="step-img"
+                    />
                 </div>
 
                 <!-- STEP 02 -->
@@ -150,12 +202,13 @@
                     <img 
                         src="content/img/app/app-screen-3.png" 
                         alt="iphone app preference" 
-                        class="step-img"/>
+                        class="step-img"
+                    />
                 </div>
             </div>
         </section><!-- .section-how -->
 
-        <section class="section-meals">
+        <section class="section-meals" id="meals">
             <div class="container center-text">
                 <span class="subheading">Meals</span>
                 <h2 class="heading-secondary">
@@ -256,7 +309,7 @@
             </div>
         </section><!-- .section-meals -->
 
-        <section class="section-testimonials">
+        <section class="section-testimonials" id="testimonials">
             <div class="testimonials-container">
                 <span class="subheading">Testimonials</span>
                 <h2 class="heading-secondary">Once you try it, you can't go back</h2>
@@ -419,7 +472,7 @@
             </div><!-- .gallery -->
         </section><!-- .section-testimonials -->
 
-        <section class="section-pricing">
+        <section class="section-pricing" id="pricing">
             <div class="container">
                 <span class="subheading">Pricing</span>
                 <h2 class="heading-secondary">
@@ -566,7 +619,7 @@
             </div><!-- .container grid grid--4-cols -->
         </section><!-- .section-pricing -->
 
-        <section class="section-cta">
+        <section class="section-cta" id="cta">
             <div class="container">
                 <div class="cta">
                     <div class="cta-text-box">
@@ -612,7 +665,7 @@
                             </div>
                             <button class="btn btn--form" type="submit">Sign up now</button>
                         </form>
-                    </div><!-- .cta-text-box -->
+                    </div><!-- .cta-    text-box -->
                     <div 
                     class="cta-img-box" 
                     role="img" 
@@ -662,7 +715,7 @@
                 </ul>
 
                 <p class="copyright">
-                    Copyright &copy; 2023 by Omnifood, Inc.
+                    Copyright &copy; <span class="year">2023</span> by Omnifood, Inc.
                     All rights reserved.
                 </p>
             </div>
@@ -720,5 +773,11 @@
         nomodule 
         src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js">
     </script>
+    <script 
+        defer 
+        src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+        >
+    </script>
+    <script defer src="js/script.js"></script>
 </body>
 </html>
